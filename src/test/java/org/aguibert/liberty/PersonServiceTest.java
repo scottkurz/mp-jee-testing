@@ -5,8 +5,6 @@ import static org.junit.Assert.assertEquals;
 import org.aguibert.testcontainers.framework.MicroProfileApplication;
 import org.aguibert.testcontainers.framework.jupiter.MicroProfileTest;
 import org.aguibert.testcontainers.framework.jupiter.RestClient;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
@@ -20,16 +18,6 @@ public class PersonServiceTest {
 
     @RestClient
     public static PersonService personSvc;
-
-    @BeforeAll
-    public static void helloAll() {
-        System.out.println("HELLO BEFORE EACH");
-    }
-
-    @BeforeEach
-    public void hello() {
-        System.out.println("HELLO BEFORE EACH");
-    }
 
     @Test
     public void testGetPerson() {
